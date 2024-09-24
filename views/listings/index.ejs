@@ -1,0 +1,91 @@
+<% layout('/layouts/boilerplate')%>
+<style>
+  #filters{
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    margin: auto;
+  }
+  .filter{
+    opacity: .6;
+    margin-top: 1.2rem;
+    text-align: center;
+    flex-grow: 1;
+    /* margin-right: 4rem; */
+  }
+  .filter p{
+    font-size: 0.8rem;
+  }
+  .filter div i{
+    font-size: 1.7rem;
+  }
+  .filter:hover{
+    opacity: 1;
+    cursor: pointer;
+  }
+  .form-switch{
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: .7rem;
+  padding-right: 3.5rem !important; 
+  font-size: 1.2rem; 
+  height: 3.5rem;
+  
+  }
+</style>
+<div id="filters">
+  <div class="filter">
+    <div><i class="fa-solid fa-fire"></i></div>
+    <p>Trending</p>
+  </div>
+  <div class="filter">
+    <div><i class="fa-solid fa-umbrella-beach"></i></div>
+    <p>Beaches</p>
+  </div>
+  
+  <div class="filter">
+    <div><i class="fa-solid fa-mountain-city"></i></div>
+    <p>Mountains</p>
+  </div>
+  
+  <div class="filter">
+    <div><i class="fa-solid fa-person-swimming"></i></div>
+    <p>Pools</p>
+  </div>
+    
+  <div class="filter">
+    <div><i class="fa-brands fa-fort-awesome"></i></div>
+    <p>Castles</p>
+  </div>
+  <div class="filter">
+    <div><i class="fa-solid fa-person-booth"></i></div>
+    <p>Rooms</p>
+  </div>
+  <div class="form-check-reverse form-switch ms-auto">
+    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">&nbsp;
+    <label class="form-check-label" for="flexSwitchCheckDefault">&nbsp;apply Taxes&nbsp;</label>
+     <!-- <p>apply Taxes&nbsp;&nbsp;</p> -->
+  </div>
+</div>
+    <!-- <h2>All Listings</h2>
+    <form action="/listings/new">
+        <button>Create New Listing</button>
+    </form> -->
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-2">
+    <% for(listing of allListings) { %>
+        <a href="/listings/<%=listing._id%>" class="card-anchor">
+         <div class="card listing-card indcard" >
+            <img src="<%=listing.image.url%>" class="card-img-top" alt="Image" style="height: 20em;
+             border-radius: 1rem;">
+            <div class="card-body">
+              <h5 class="card-title"><%=listing.title%></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">&#x20B9;<%= listing.price.toLocaleString("en-IN")%>/Night</li>
+              <li class="list-group-item"><%=listing.location%></li>
+            </ul>
+          </div>
+        </a>
+        <% } %>
+    </div>
+

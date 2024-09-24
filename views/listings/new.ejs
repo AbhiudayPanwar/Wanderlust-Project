@@ -1,0 +1,50 @@
+<% layout('/layouts/boilerplate')%>
+
+    <div class="row">
+      <div class="col-8 offset-2">
+    <h2 class="add-heading">Add Listing</h2>
+    <form action='/listings' method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+      <div class="mb-1">
+        <label for="title" class="form-label">Title </label>
+        <input type="text" class="form-control" placeholder="Title" name="listing[title]" required>
+        <div class="valid-feedback">valid</div>
+        <div class="invalid-feedback">Invalid, please try again</div>
+      </div>
+     <div class="mb-1">
+      <label for="description" class="form-label">Discription </label>
+     <textarea name="listing[description]" class="form-control" required></textarea>
+     <div class="valid-feedback">valid</div>
+        <div class="invalid-feedback">Invalid, please try again</div>
+     </div>
+     <div class="mb-1">
+      <label for="image" class="form-label">Image Link </label>
+      <input type="file" class="form-control" placeholder="link" name="listing[image]">
+      <div class="valid-feedback">valid</div>
+        <div class="invalid-feedback">Invalid, please try again</div>
+    </div>
+    <div class="mb-1">
+      <label for="price" class="form-label">Price </label>
+      <input type="text\" class="form-control"  name="listing[price]" required>
+      <div class="valid-feedback">valid</div>
+        <div class="invalid-feedback">Invalid, please try again</div>
+    </div>
+    <div class="row">
+      <div class="mb-1 col-md-4">
+      <label for="location" class="form-label">Location </label>
+      <input type="text" class="form-control" placeholder="Uttar Pradesh" name="listing[location]" required>
+      <div class="valid-feedback">valid</div>
+      <div class="invalid-feedback">Invalid, please try again</div>
+    </div>
+    <div class="mb-1 col-md-8">
+    <label for="country" class="form-label">Country </label>
+    <input type="text" class="form-control" placeholder="India" name="listing[country]" required>
+    <div class="valid-feedback">valid</div>
+        <div class="invalid-feedback">Invalid, please try again</div>
+  </div>
+    <br>
+  </div>
+      <button class="btn addbtn mt-1">Add</button>
+    </form>
+  </div>
+</div>
+

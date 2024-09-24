@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--divinectorweb.com-->
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins');
+        </style>
+    <title>WanderLust</title>
+    <style>* {
+        margin: 0px;
+        padding: 0px;
+    }
+    body {
+        overflow: hidden;
+    }
+    .content {
+        background: linear-gradient(to bottom, #ff512f, #dd2476);
+        height: 100vh;
+        font-family: poppins;
+    }
+    .content div {
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* font-family: sans-serif; */
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        
+    }
+    .content h1{
+        font-size: 5rem;
+        text-align: center;
+        text-transform:uppercase;
+        padding-bottom: 2.5rem;
+    }
+    .content p{
+        color: white;
+        text-decoration: none;
+        font-size: 1.4rem;
+        position: relative;
+        transform: translateY(1.5rem);
+        
+    } 
+    .content button{
+        background-color: white;
+        color: #f03131;
+        border: none;
+        border-radius: 1rem;
+        font-size: 1.2rem;
+        padding: .7rem;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .75s ease-in .25s;
+        z-index: 1;
+    }
+    .content button:hover{
+        background-color: #eb3c3c00;
+        color: #fff;
+    }
+    .box ul li {
+        position: relative;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 0.9em;
+        margin-right: 0.9em;
+        margin-bottom: 1.2em;
+        border-right: 0.3em solid transparent;
+        border-bottom: 0.7em solid white;
+        border-left: 0.3em solid transparent;
+        list-style: none;
+        opacity: 0;
+        bottom: 0;
+        left: 10vw;
+        animation: animate 15s linear infinite;
+    }
+    .box ul li:before, .box ul li:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 0.6em;
+        left: -1em;
+        border-right: 1em solid transparent;
+        border-bottom: 0.7em solid white;
+        border-left: 1em solid transparent;
+        transform: rotate(-35deg);
+    }
+    .box ul li:after {
+        transform: rotate(35deg);
+    }
+    .box ul li:nth-child(2) {
+        left: 36vw;
+        animation-delay: 2s;
+    }
+    .box ul li:nth-child(3) {
+        left: 22vw;
+        animation-delay: 4s;
+    }
+    .box ul li:nth-child(4) {
+        left: 56vw;
+        animation-delay: 6s;
+    }
+    .box ul li:nth-child(5) {
+        left: 76vw;
+        animation-delay: 4s;
+    }
+    .box ul li:nth-child(6) {
+        left: 80vw;
+        animation-delay: 8s;
+    }
+    @keyframes animate {
+        0% {
+            transform: scale(0) rotate(0);
+            opacity: 1;
+            bottom: 0;
+        }
+        100% {
+            transform: scale(5) rotate(360deg);
+            opacity: 0;
+            bottom: 100vh;
+        }
+    }
+    </style>   
+</head>
+<body>
+   
+    <div class="content">
+        <div class="middleEntry">
+            <p>WELCOME To</p>
+            <h1>Wanderlust</h1>
+        </div>
+        <br><br>
+        <button><a href="/listings" style="background-color: transparent; color: inherit; text-decoration: none;">Visit Site</a></button>
+    </div>
+    
+    <div class="box">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+           
+        </ul>
+    </div>
+</body>
+</html>
