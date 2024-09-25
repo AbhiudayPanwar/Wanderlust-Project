@@ -59,13 +59,16 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use((req,res,next)=>
 {
+    console.log('Current User:', req.user);
     res.locals.successMsg=req.flash("success");
     res.locals.errorMsg=req.flash("error");
-    res.locals.currentUser = req.user;
+    res.locals.currentUser = req.user || null;
+    console.log("Middleware Executed");
     next();
 });
 
 app.get('/',(req,res)=>{
+    console.log('Route hit');
     res.render("listings/home.ejs");
 });
 app.use("/listings",listingsRouter);
